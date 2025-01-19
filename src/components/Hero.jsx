@@ -1,7 +1,9 @@
 import React from "react";
 import { delay, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Hero = ({ discount, arrow, robot }) => {
+  const [ref, inView] = useInView({ triggerOnce: true });
   return (
     <div className="w-full lg:h-[88vh] lg:flex">
       <div className="lg:w-[50%] lg:h-full bg-transperant lg:pt-[60px] relative w-full h-[50%] flex flex-col  mt-[15%] lg:block lg:mt-0">
@@ -58,8 +60,9 @@ const Hero = ({ discount, arrow, robot }) => {
         </motion.p>
       </div>
       <motion.div
+        ref={ref}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={inView ? { opacity: 1 } : {}}
         transition={{ delay: 1.1, duration: 1 }}
         className="lg:w-[50%] lg:h-full relative  w-[100vw] h-[500px] "
       >
