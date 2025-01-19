@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 
 const Hero = ({ discount, arrow, robot }) => {
   return (
@@ -57,14 +57,19 @@ const Hero = ({ discount, arrow, robot }) => {
           annual fees
         </motion.p>
       </div>
-      <div className="lg:w-[50%] lg:h-full relative  w-[100vw] h-[500px] ">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.1, duration: 1 }}
+        className="lg:w-[50%] lg:h-full relative  w-[100vw] h-[500px] "
+      >
         <div className="absolute w-full h-full blue__gradient top-[-100px]"></div>
         <img
           className="w-full h-full object-contain object-top block"
           src={robot}
           alt=""
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
