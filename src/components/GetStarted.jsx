@@ -7,9 +7,9 @@ const GetStarted = ({ arrow }) => {
   return (
     <motion.div
       ref={ref}
-      initial={{ y: 100 }}
-      animate={inView ? { y: 0 } : {}}
-      transition={{ duration: 0.3 }}
+      initial={{ y: 100, opacity: 0 }}
+      animate={inView ? { y: 0, opacity: 1 } : {}}
+      transition={{ delay: 0.5, duration: 0.5 }}
       className="relative  md:hidden flex justify-center"
     >
       <div className="border-4 border-[#33bbcf] w-[200px] h-[200px] flex flex-col justify-center items-center rounded-full">

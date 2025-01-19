@@ -18,16 +18,22 @@ const Hero = ({ discount, arrow, robot }) => {
           </p>
           <p className="text-[18xp] text-gradient font-semibold">Started</p>
         </motion.div>
-        <div className="text-center lg:text-start">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="text-center lg:text-start"
+        >
           <p className="items-center  inline-flex py-1 px-2 bg-discount-gradient rounded-[15px] text-[14px] mb-5 lg:mb-0">
             <img className="object-contain" src={discount} alt="" />
             20% DISCOUNT FOR ONE MONTH ACCOUNT
           </p>
-        </div>
+        </motion.div>
         <motion.div className="lg:text-[65px] leading-[1.2em]  text-[60px] font-semibold text-center lg:text-start flex flex-col space-y-0">
           <motion.p
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.3 }}
             className=""
           >
             The Next
@@ -35,7 +41,7 @@ const Hero = ({ discount, arrow, robot }) => {
           <motion.p
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.5, duration: 0.3 }}
             className="text-gradient"
           >
             Generation
@@ -43,7 +49,7 @@ const Hero = ({ discount, arrow, robot }) => {
           <motion.p
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.7 }}
+            transition={{ delay: 0.7, duration: 0.3 }}
           >
             Payment Method.
           </motion.p>
@@ -51,7 +57,7 @@ const Hero = ({ discount, arrow, robot }) => {
         <motion.p
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 1, duration: 0.3 }}
+          transition={{ delay: 1.2, duration: 0.3 }}
           className="text-[15px] leading-7 mt-7 text-gray-300 text-center lg:text-start max-w-[500px] px-5 lg:px-0 mb-9 lg:mb-0"
         >
           Our team of experts uses a methodology to identify the credit card
@@ -63,7 +69,7 @@ const Hero = ({ discount, arrow, robot }) => {
         ref={ref}
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
-        transition={{ delay: 1.1, duration: 1 }}
+        transition={{ delay: 1.4, duration: 1.5 }}
         className="lg:w-[50%] lg:h-full relative  w-[100vw] h-[500px] "
       >
         <div className="absolute w-full h-full blue__gradient top-[-100px]"></div>
