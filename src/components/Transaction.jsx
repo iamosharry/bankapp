@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 const Transaction = ({ bill, apple, google }) => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-  const [ref2, inView2] = useInView({ triggerOnce: true, threshold: 0.15 });
+  const [ref2, inView2] = useInView({ triggerOnce: true });
   return (
     <div className="md:flex items-center md:justify-center mt-10">
       <motion.div

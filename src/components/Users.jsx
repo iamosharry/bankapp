@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 const Users = () => {
   const [ref, inView] = useInView({ triggerOnce: true });
   return (
-    <div className="lg:flex md:flex mt-[100px] sm:justify-between px-[30px] sm:px-0">
+    <div className="lg:flex md:flex mt-[100px] sm:justify-between px-[30px] sm:px-0 ">
       <motion.div
         ref={ref}
         initial={{ x: -100, opacity: 0 }}

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const Hero = ({ discount, arrow, robot }) => {
   const [ref, inView] = useInView({ triggerOnce: true });
+  let showTitles = ["Generation", "Future", "World", "Best"];
+  const [count, setCount] = useState(0);
+
   return (
     <div className="w-full lg:h-[88vh] lg:flex">
       <div className="lg:w-[50%] lg:h-full bg-transperant lg:pt-[60px] relative w-full h-[50%] flex flex-col  mt-[15%] lg:block lg:mt-0">

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const Card = ({ card }) => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 1 });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
   return (
     <div className="mt-[100px] px-7 md:flex items-center md:space-x-6">
       <div className="md:w-[50%] sm:w-[50%]">
