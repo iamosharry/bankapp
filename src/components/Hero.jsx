@@ -4,8 +4,20 @@ import { useInView } from "react-intersection-observer";
 
 const Hero = ({ discount, arrow, robot }) => {
   const [ref, inView] = useInView({ triggerOnce: true });
-  let showTitles = ["Generation", "Future", "World", "Best"];
+  const [titles, setTitles] = useState([
+    "Generation",
+    "Elevation",
+    "Innovation",
+    "Migration",
+  ]);
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount((count) => (count + 1) % titles.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="w-full lg:h-[88vh] lg:flex">
@@ -47,7 +59,7 @@ const Hero = ({ discount, arrow, robot }) => {
             transition={{ delay: 0.5, duration: 0.3 }}
             className="text-gradient"
           >
-            Generation
+            {titles[count]}
           </motion.p>
           <motion.p
             initial={{ y: 100, opacity: 0 }}
