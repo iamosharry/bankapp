@@ -11,7 +11,7 @@ const Footer = ({ logo, instagram, linkedin, twitter, facebook }) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3   ">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 md:gap-7 lg:grid-cols-3 lg::space-x-14   ">
           <div className=" lg:w-full">
             <h3 className="font-bold text-[23px] mb-2">Usefull links</h3>
             <ul className="text-gray-300 font-semibold">
