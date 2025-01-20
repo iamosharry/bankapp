@@ -41,32 +41,52 @@ const Hero = ({ discount, arrow, robot }) => {
           transition={{ duration: 1 }}
           className="text-center lg:text-start"
         >
-          <p className="items-center  inline-flex py-1 px-2 bg-discount-gradient rounded-[15px] text-[14px] mb-5 lg:mb-0">
+          <motion.p
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.4,
+              scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+            }}
+            className="items-center  inline-flex py-1 px-2 bg-discount-gradient rounded-[15px] text-[14px] mb-5 lg:mb-0"
+          >
             <img className="object-contain" src={discount} alt="" />
             20% DISCOUNT FOR ONE MONTH ACCOUNT
-          </p>
+          </motion.p>
         </motion.div>
         <motion.div className="lg:text-[65px] leading-[1.2em]  text-[60px] font-semibold text-center lg:text-start flex flex-col space-y-0">
           <motion.p
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              delay: 0.5,
+              duration: 0.4,
+              scale: { type: "spring", visualDuration: 0.4, bounce: 0.7 },
+            }}
             className=""
           >
             The Next
           </motion.p>
           <motion.p
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.3 }}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              delay: 0.7,
+              duration: 0.4,
+              scale: { type: "spring", visualDuration: 0.4, bounce: 0.8 },
+            }}
             className="text-gradient"
           >
             {titles[count]}
           </motion.p>
           <motion.p
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.7, duration: 0.3 }}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              delay: 1,
+              duration: 0.4,
+              scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+            }}
           >
             Payment Method.
           </motion.p>
