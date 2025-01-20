@@ -79,7 +79,6 @@ const App = () => {
         linkedin={linkedin}
         instagram={instagram}
       />
-      <Testing />
     </div>
   );
 };
