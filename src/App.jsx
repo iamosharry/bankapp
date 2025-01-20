@@ -38,7 +38,6 @@ import {
   twitter,
 } from "./assets";
 import Footer from "./components/Footer";
-import Testing from "./components/Testing";
 
 const App = () => {
   const navlist = ["Home", "About Us", "Features", "Solution"];
