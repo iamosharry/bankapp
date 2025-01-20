@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = ({ discount, arrow, robot }) => {
   const [ref, inView] = useInView({ triggerOnce: true });
@@ -23,10 +24,11 @@ const Hero = ({ discount, arrow, robot }) => {
     <div className="w-full lg:h-[88vh] lg:flex">
       <div className="lg:w-[50%] lg:h-full bg-transperant lg:pt-[60px] relative w-full h-[50%] flex flex-col  mt-[15%] lg:block lg:mt-0">
         <motion.div
+          drag
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="absolute lg:right-[10%] lg:top-[25%]  border-2 border-[#33bbcf] hover:border-white w-[100px] h-[100px] hidden sm:flex flex-col justify-center items-center rounded-full hover:scale-110 hover:cursor-pointer  transition-transform duration-300 ease-in-out"
+          className="absolute lg:right-[10%] lg:top-[25%] z-[1000]  border-2 border-[#33bbcf] hover:border-white w-[100px] h-[100px] hidden sm:flex flex-col justify-center items-center rounded-full  hover:cursor-pointer"
         >
           <p className="flex items-center text-[18xp] text-gradient font-semibold">
             Get <img src={arrow} alt="" />
