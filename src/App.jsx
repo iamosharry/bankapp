@@ -9,6 +9,7 @@ import Card from "./components/Card";
 import Comments from "./components/Comments";
 import Clients from "./components/Clients";
 import Banner from "./components/Banner";
+import { motion } from "framer-motion";
 
 import {
   logo,

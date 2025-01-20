@@ -3,10 +3,17 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const Card = ({ card }) => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
   return (
     <div className="mt-[100px] px-7 md:flex items-center md:space-x-6">
-      <div className="md:w-[50%] sm:w-[50%]">
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          scale: { type: "spring", visualDuration: 0.4, bounce: 0.4 },
+        }}
+        className="md:w-[50%] sm:w-[50%]"
+      >
         <h2 className="text-[30px] font-semibold md:max-w-[500px]">
           Find a better card deal in few easy steps.
         </h2>
@@ -20,12 +27,11 @@ const Card = ({ card }) => {
             Get Started
           </button>
         </div>
-      </div>
+      </motion.div>
       <motion.div
-        ref={ref}
-        initial={{ y: 50, opacity: 0 }}
-        animate={inView ? { y: 0, opacity: 1 } : {}}
-        transition={{ duration: 0.5 }}
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.4 }}
         className="flex justify-center mt-[100px] md:mt-0 md:w-[50%] sm:w-[50%] "
       >
         <img

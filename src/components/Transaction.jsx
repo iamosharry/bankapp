@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const Transaction = ({ bill, apple, google }) => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-  const [ref2, inView2] = useInView({ triggerOnce: true });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
   return (
     <div className="md:flex items-center md:justify-center mt-10">
       <motion.div
         ref={ref}
         initial={{ x: -300, opacity: 0 }}
-        animate={inView ? { x: 15, opacity: 1 } : {}}
+        whileInView={inView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 0.7 }}
         className="flex md:w-[50%] sm:justify-start justify-center  px-3"
       >
@@ -21,10 +20,12 @@ const Transaction = ({ bill, apple, google }) => {
         />
       </motion.div>
       <motion.div
-        ref={ref2}
-        initial={{ y: 50, opacity: 0 }}
-        animate={inView2 ? { y: 0, opacity: 1 } : {}}
-        transition={{ delay: 0.7, duration: 0.7 }}
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          scale: { type: "spring", visualDuration: 0.4, bounce: 0.4 },
+        }}
         className="px-5 mt-10 md:w-[50%]"
       >
         <h3 className="font-semibold text-[25px] md:text-[30px] lg:text-[50px] max-w-[350px] lg:max-w-[600px]">
