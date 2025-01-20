@@ -13,8 +13,10 @@ const Users = () => {
         transition={{ duration: 0.5 }}
         className="flex items-center space-x-5 lg:psudo mb-[20px]"
       >
-        <h3 className="lg:text-[40px] text-[30px] font-semibold">3800+</h3>
-        <p className="text-gradient text-[14px] sm:text-[16px] font-bold">
+        <h3 className="lg:text-[40px] text-[30px] font-semibold fontcus1">
+          3800+
+        </h3>
+        <p className="text-gradient text-[14px] sm:text-[16px] font-bold fontcus2">
           USER ACTIVE
         </p>
       </motion.div>
@@ -25,8 +27,10 @@ const Users = () => {
         transition={{ delay: 0.3, duration: 0.5 }}
         className="flex items-center space-x-5 lg:psudo mb-[20px] justify-center"
       >
-        <h3 className="lg:text-[40px] text-[30px] font-semibold">230+</h3>
-        <p className="text-gradient text-[14px] sm:text-[16px] font-bold">
+        <h3 className="lg:text-[40px] text-[30px] font-semibold fontcus1">
+          230+
+        </h3>
+        <p className="text-gradient text-[14px] sm:text-[16px] font-bold fontcus2">
           TRUSTED BY COMPANY
         </p>
       </motion.div>
@@ -37,8 +41,10 @@ const Users = () => {
         transition={{ delay: 0.5, duration: 0.5 }}
         className="flex items-center space-x-5 mb-[20px]"
       >
-        <h3 className="lg:text-[40px] text-[30px] font-semibold">$230M+</h3>
-        <p className="text-gradient text-[14px] sm:text-[16px] font-bold">
+        <h3 className="lg:text-[40px] text-[30px] font-semibold fontcus1">
+          $230M+
+        </h3>
+        <p className="text-gradient text-[14px] sm:text-[16px] font-bold fontcus2">
           TRANSACTION
         </p>
       </motion.div>

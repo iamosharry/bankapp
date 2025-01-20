@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const Transaction = ({ bill, apple, google }) => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: window.innerWidth < 768 ? 0.2 : 0.4,
+  });
   return (
     <div className="md:flex items-center md:justify-center mt-10">
       <motion.div
@@ -11,6 +14,7 @@ const Transaction = ({ bill, apple, google }) => {
         initial={{ x: -300, opacity: 0 }}
         whileInView={inView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
         className="flex md:w-[50%] sm:justify-start justify-center  px-3"
       >
         <img
@@ -26,6 +30,7 @@ const Transaction = ({ bill, apple, google }) => {
           duration: 0.8,
           scale: { type: "spring", visualDuration: 0.4, bounce: 0.4 },
         }}
+        viewport={{ once: true }}
         className="px-5 mt-10 md:w-[50%]"
       >
         <h3 className="font-semibold text-[25px] md:text-[30px] lg:text-[50px] max-w-[350px] lg:max-w-[600px]">

@@ -48,7 +48,7 @@ const Hero = ({ discount, arrow, robot }) => {
               duration: 0.4,
               scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
             }}
-            className="items-center  inline-flex py-1 px-2 bg-discount-gradient rounded-[15px] text-[14px] mb-5 lg:mb-0"
+            className="items-center  inline-flex py-1 px-2 bg-discount-gradient rounded-[15px] text-[14px] mb-5 lg:mb-0 fontcus1 shadow-lg"
           >
             <img className="object-contain" src={discount} alt="" />
             20% DISCOUNT FOR ONE MONTH ACCOUNT
@@ -63,7 +63,7 @@ const Hero = ({ discount, arrow, robot }) => {
               duration: 0.4,
               scale: { type: "spring", visualDuration: 0.4, bounce: 0.7 },
             }}
-            className=""
+            className="fontcus2 text-6xl"
           >
             The Next
           </motion.p>
@@ -75,7 +75,7 @@ const Hero = ({ discount, arrow, robot }) => {
               duration: 0.4,
               scale: { type: "spring", visualDuration: 0.4, bounce: 0.8 },
             }}
-            className="text-gradient"
+            className="text-gradient fontcus1 text-7xl py-2"
           >
             {titles[count]}
           </motion.p>
@@ -87,6 +87,7 @@ const Hero = ({ discount, arrow, robot }) => {
               duration: 0.4,
               scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
             }}
+            className="fontcus2 text-6xl"
           >
             Payment Method.
           </motion.p>
@@ -95,7 +96,7 @@ const Hero = ({ discount, arrow, robot }) => {
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.3 }}
-          className="text-[15px] leading-7 mt-7 text-gray-300 text-center lg:text-start max-w-[500px] px-5 lg:px-0 mb-9 lg:mb-0"
+          className="text-[15px] leading-7 mt-7 fontcus2 text-gray-300 text-center lg:text-start max-w-[500px] px-5 lg:px-0 mb-9 lg:mb-0"
         >
           Our team of experts uses a methodology to identify the credit card
           most likely to fit your needs. We examine annual percentage rate,

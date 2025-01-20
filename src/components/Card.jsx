@@ -12,6 +12,7 @@ const Card = ({ card }) => {
           duration: 0.8,
           scale: { type: "spring", visualDuration: 0.4, bounce: 0.4 },
         }}
+        viewport={{ once: true }}
         className="md:w-[50%] sm:w-[50%]"
       >
         <h2 className="text-[30px] font-semibold md:max-w-[500px]">
@@ -32,6 +33,7 @@ const Card = ({ card }) => {
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.4 }}
+        viewport={{ once: true }}
         className="flex justify-center mt-[100px] md:mt-0 md:w-[50%] sm:w-[50%] "
       >
         <img

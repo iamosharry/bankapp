@@ -9,8 +9,8 @@ const GetStarted = ({ arrow }) => {
       transition={{ delay: 0.5, duration: 0.5 }}
       className="relative  md:hidden flex justify-center"
     >
-      <div className="border-4 border-[#33bbcf] w-[200px] h-[200px] flex flex-col justify-center items-center rounded-full">
-        <p className="flex items-center text-[30px] text-gradient font-semibold">
+      <div className="border-4 border-[#33bbcf] w-[200px] h-[200px] flex flex-col justify-center items-center rounded-full shadow-gray-600 shadow-2xl">
+        <p className="flex items-center text-[30px] text-gradient font-semibold fontcus1">
           Get{" "}
           <img
             className="object-contain w-[30px] h-[30px]"
@@ -18,7 +18,9 @@ const GetStarted = ({ arrow }) => {
             alt=""
           />
         </p>
-        <p className="text-[30px] text-gradient font-semibold">Started</p>
+        <p className="text-[30px] text-gradient font-semibold fontcus1">
+          Started
+        </p>
       </div>
     </motion.div>
   );

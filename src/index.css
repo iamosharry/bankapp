@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Macondo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -139,13 +141,12 @@
   filter: blur(750px);
 }
 
-
-.psudo{
+.psudo {
   position: relative;
 }
 
-.psudo::after{
-  content: '';
+.psudo::after {
+  content: "";
   position: absolute;
   width: 2px;
   height: 17px;
@@ -153,11 +154,14 @@
   right: -30%;
 }
 
-.ttp{
-  background: linear-gradient(
-    144.39deg,
-    #ffffffb6 ,
-    #6d6d6d6e ,
-    #11101d70 
-  );
+.ttp {
+  background: linear-gradient(144.39deg, #ffffffb6, #6d6d6d6e, #11101d70);
+}
+
+.fontcus1 {
+  font-family: "Macondo", sans-serif;
+}
+
+.fontcus2 {
+  font-family: "Rubik", sans-serif;
 }

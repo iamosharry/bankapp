@@ -20,6 +20,7 @@ const Business = ({ star, shield, send }) => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{
             duration: 0.8,
             y: { type: "spring", visualDuration: 0.4, bounce: 0.4 },
@@ -49,6 +50,7 @@ const Business = ({ star, shield, send }) => {
             duration: 0.8,
             y: { type: "spring", visualDuration: 0.4, bounce: 0.4 },
           }}
+          viewport={{ once: true }}
           className="mt-[70px] lg:mt-1 relative py-[30px]"
         >
           <div className="absolute w-[140%] h-full ttp top-0 left-[-35%] rounded-[30px] "></div>
@@ -75,6 +77,7 @@ const Business = ({ star, shield, send }) => {
             duration: 0.8,
             y: { type: "spring", visualDuration: 0.4, bounce: 0.4 },
           }}
+          viewport={{ once: true }}
           className="mt-[70px] lg:mt-1 relative py-[30px]"
         >
           <img
