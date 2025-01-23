@@ -22,7 +22,7 @@ const Hero = ({ discount, arrow, robot }) => {
 
   return (
     <div className="w-full lg:h-[88vh] lg:flex">
-      <div className="lg:w-[50%] lg:h-full bg-transperant lg:pt-[60px] relative w-full h-[50%] flex flex-col  mt-[15%] lg:block lg:mt-0">
+      <div className="lg:w-[50%] lg:h-full bg-transperant lg:pt-[60px] relative w-full h-[50%] flex flex-col  mt-[15%] lg:block lg:mt-10">
         <motion.div
           drag
           initial={{ opacity: 0 }}
@@ -48,7 +48,7 @@ const Hero = ({ discount, arrow, robot }) => {
               duration: 0.4,
               scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
             }}
-            className="items-center  inline-flex py-1 px-2 bg-discount-gradient rounded-[15px] text-[14px] mb-5 lg:mb-0 fontcus1 shadow-lg"
+            className="items-center  inline-flex py-1 px-2 bg-discount-gradient rounded-[15px] text-[14px] mb-7 lg:mb-5 fontcus1 shadow-lg"
           >
             <img className="object-contain" src={discount} alt="" />
             20% DISCOUNT FOR ONE MONTH ACCOUNT
